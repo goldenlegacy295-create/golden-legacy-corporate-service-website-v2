@@ -195,8 +195,18 @@ const CostCalculatorPage = () => {
   const handleFinalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsFinalizing(true);
-    // Simulate estimate generation
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      await fetch("https://formsubmit.co/ajax/goldenlegacy295@gmail.com", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData),
+      });
+    } catch (error) {
+      console.error(error);
+    }
     setIsFinalizing(false);
     setShowModal(true);
   };

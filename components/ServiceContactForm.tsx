@@ -33,11 +33,20 @@ const ServiceContactForm = ({
     "RAK Offshore Company Formation"
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate API call
-    setTimeout(() => setStatus('success'), 1500);
+    const formData = new FormData(e.currentTarget);
+    try {
+      await fetch("https://formsubmit.co/ajax/goldenlegacy295@gmail.com", {
+        method: "POST",
+        body: formData,
+      });
+      setStatus('success');
+    } catch (error) {
+      console.error(error);
+      setStatus('idle');
+    }
   };
 
   if (status === 'success') {
@@ -76,6 +85,7 @@ const ServiceContactForm = ({
               <input 
                 required
                 type="text" 
+                name="name"
                 placeholder="Your Name" 
                 className="w-full bg-gray-50 border border-gray-100 rounded-xl py-3 pl-12 pr-4 text-sm text-black focus:bg-white focus:border-gold/40 focus:ring-1 focus:ring-gold/20 outline-none transition-all font-medium"
               />
@@ -88,6 +98,7 @@ const ServiceContactForm = ({
               <input 
                 required
                 type="email" 
+                name="email"
                 placeholder="Email Address" 
                 className="w-full bg-gray-50 border border-gray-100 rounded-xl py-3 pl-12 pr-4 text-sm text-black focus:bg-white focus:border-gold/40 focus:ring-1 focus:ring-gold/20 outline-none transition-all font-medium"
               />
@@ -100,6 +111,7 @@ const ServiceContactForm = ({
               <input 
                 required
                 type="tel" 
+                name="phone"
                 placeholder="Phone Number" 
                 className="w-full bg-gray-50 border border-gray-100 rounded-xl py-3 pl-12 pr-4 text-sm text-black focus:bg-white focus:border-gold/40 focus:ring-1 focus:ring-gold/20 outline-none transition-all font-medium"
               />
@@ -111,6 +123,7 @@ const ServiceContactForm = ({
               <Landmark className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
               <select 
                 value={service}
+                name="service"
                 onChange={(e) => setService(e.target.value)}
                 className="w-full bg-gray-50 border border-gray-100 rounded-xl py-3 pl-12 pr-4 text-sm text-black focus:bg-white focus:border-gold/40 focus:ring-1 focus:ring-gold/20 outline-none transition-all font-medium appearance-none cursor-pointer"
               >
@@ -143,6 +156,7 @@ const ServiceContactForm = ({
             <div className="relative">
               <MessageSquare className="absolute left-4 top-4 text-gray-400" size={16} />
               <textarea 
+                name="requirements"
                 placeholder="Special Requirements..." 
                 rows={3}
                 className="w-full bg-gray-50 border border-gray-100 rounded-xl py-3 pl-12 pr-4 text-sm text-black focus:bg-white focus:border-gold/40 focus:ring-1 focus:ring-gold/20 outline-none transition-all font-medium resize-none"

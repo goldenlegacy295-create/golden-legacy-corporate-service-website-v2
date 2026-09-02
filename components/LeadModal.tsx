@@ -19,10 +19,17 @@ export default function LeadModal() {
     return () => clearTimeout(timer);
   }, [pathname]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Logic to handle form submission (e.g., API call)
-    // For now, just close the modal
+    const formData = new FormData(e.currentTarget);
+    try {
+      await fetch("https://formsubmit.co/ajax/goldenlegacy295@gmail.com", {
+        method: "POST",
+        body: formData,
+      });
+    } catch (error) {
+      console.error(error);
+    }
     setIsOpen(false);
   };
 
@@ -72,6 +79,7 @@ export default function LeadModal() {
                     <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-gold transition-colors" size={18} />
                     <input
                       type="text"
+                      name="name"
                       placeholder="Full Name"
                       required
                       className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-gold/50 focus:bg-white/10 transition-all text-sm font-medium"
@@ -84,6 +92,7 @@ export default function LeadModal() {
                     <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-gold transition-colors" size={18} />
                     <input
                       type="tel"
+                      name="phone"
                       placeholder="Phone Number"
                       required
                       className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-gold/50 focus:bg-white/10 transition-all text-sm font-medium"
@@ -96,6 +105,7 @@ export default function LeadModal() {
                     <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-gold transition-colors" size={18} />
                     <input
                       type="email"
+                      name="email"
                       placeholder="Email Address"
                       required
                       className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-gold/50 focus:bg-white/10 transition-all text-sm font-medium"
