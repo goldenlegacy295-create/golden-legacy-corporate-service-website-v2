@@ -4,6 +4,7 @@ export const teamMembers = [
     name: "Ms. Jasbir Kaur",
     role: "Owner & Director",
     image: "/jasbir-kaur-singh.png",
+    imageClass: "scale-[1.35] group-hover:scale-[1.4] translate-y-8",
     bio: "Ms. Jasbir Kaur Singh is the Owner and Director of GOLDEN LEGACY, providing the strategic vision and leadership that drives the company's success. With a heritage of business excellence and a deep commitment to client success, she oversees the firm's growth and ensures that every client receives the premium service that GOLDEN LEGACY stands for.",
     message: "At GOLDEN LEGACY, we don't just set up companies; we build enduring legacies. My vision is to create a gateway for global entrepreneurs to thrive in the UAE's dynamic economy through excellence and integrity."
   },
@@ -22,6 +23,7 @@ export const teamMembers = [
     role: "Corporate Services Advisor",
     image: "/virender-kumar.png",
     linkedin: "https://www.linkedin.com/in/virender-kumar-b966616a/",
+    imageClass: "scale-[1.4] group-hover:scale-[1.45] translate-y-10",
     experience: "2 Decades",
     bio: "Mr. Virender Kumar is a distinguished Corporate Services Advisor bringing two decades of elite banking experience in the UAE to GOLDEN LEGACY. He leverages his deep financial expertise to guide entrepreneurs through the intricacies of business setup and banking operations. His commanding knowledge of financial institutions and government regulations ensures that every client's business structure is optimized for long-term growth and stability.",
     message: "Building a business in the UAE is an exciting journey. I am here to ensure that your foundation is solid and that you are perfectly positioned to take advantage of the region's immense opportunities."
@@ -41,6 +43,7 @@ export const teamMembers = [
     role: "Corporate Service Advisor",
     image: "/nikita-agarwal.png",
     linkedin: "https://www.linkedin.com/in/nikita-agarwal-cs",
+    imageClass: "scale-[1.1] group-hover:scale-[1.15] translate-y-4",
     expertise: "Experience in CSP and Legal Drafting",
     profession: "Company Secretary (ICSI)",
     bio: "Ms. Nikita Agarwal specializes in making the complex world of UAE business laws easy to understand. She takes the stress out of legal paperwork by explaining everything in simple, plain language, so you never feel lost in jargon. As a qualified Company Secretary, she handles the heavy lifting of compliance and documentation, allowing you to focus on running your business while knowing every legal detail is expertly managed.",
@@ -51,7 +54,7 @@ export const teamMembers = [
     name: "Mr Zoraver",
     role: "Corporate Service Advisor",
     image: "/Zoraver.png",
-    imageClass: "object-top !scale-[0.85] group-hover:!scale-[0.90] translate-y-8",
+    imageClass: "object-top scale-[1.1] group-hover:scale-[1.15] translate-y-8",
     bio: "Mr Zoraver is a dedicated Corporate Service Advisor at GOLDEN LEGACY, providing expert guidance and strategic insights to entrepreneurs looking to establish and expand their businesses in the UAE.",
     message: "My priority is to deliver tailored corporate solutions that drive growth, ensure compliance, and lay a solid foundation for your long-term success in the dynamic UAE market."
   },
