@@ -92,7 +92,7 @@ const TeamMemberCard = ({ member }: { member: any }) => (
         src={member.image}
         alt={member.name}
         fill
-        className={`object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105 ${member.imageClass || ''}`}
+        className={`object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 ${member.imageClass || 'group-hover:scale-105'}`}
       />
       
       {/* Premium Overlay */}

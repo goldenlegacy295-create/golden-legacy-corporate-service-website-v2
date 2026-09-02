@@ -99,14 +99,14 @@ const TeamMemberClient = ({ member }: { member: TeamMember }) => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="relative h-[300px] lg:h-[500px] w-full order-1 lg:order-2"
+            className="relative h-[300px] lg:h-[500px] w-full order-1 lg:order-2 group"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
             <Image 
               src={member.image}
               alt={member.name}
               fill
-              className={`object-cover ${member.imageClass || 'object-center'} hover:scale-105 transition-all duration-1000`}
+              className={`object-cover transition-all duration-1000 ${member.imageClass || 'object-center group-hover:scale-105'}`}
               priority
             />
           </motion.div>
