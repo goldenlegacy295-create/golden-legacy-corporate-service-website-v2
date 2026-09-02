@@ -90,12 +90,13 @@ const Navbar = () => {
         <div className={`relative flex justify-between items-center px-6 rounded-full border transition-all duration-500 ${scrolled ? 'bg-black/60 backdrop-blur-2xl border-white/10 shadow-2xl h-16' : 'bg-black/5 backdrop-blur-md border-white/10 h-20'}`}>
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="group flex items-center gap-3">
-              <div className="relative w-12 h-12 overflow-hidden rounded-xl">
+              <div className="relative w-16 h-12 overflow-hidden">
                 <Image 
-                  src="/logo.png" 
+                  src="/golden-logo.png" 
                   alt="Golden Legacy Logo" 
                   fill 
                   className="object-contain"
+                  priority
                 />
               </div>
               <div className="flex flex-col">
