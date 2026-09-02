@@ -47,6 +47,14 @@ export const teamMembers = [
     message: "Precision in legal drafting and absolute compliance are the cornerstones of a successful business. My focus is on breaking down barriers and making the legal process transparent and accessible for every entrepreneur."
   },
   {
+    slug: "zoraver",
+    name: "Mr Zoraver",
+    role: "Corporate Service Advisor",
+    image: "/Zoraver.png",
+    bio: "Mr Zoraver is a dedicated Corporate Service Advisor at GOLDEN LEGACY, providing expert guidance and strategic insights to entrepreneurs looking to establish and expand their businesses in the UAE.",
+    message: "My priority is to deliver tailored corporate solutions that drive growth, ensure compliance, and lay a solid foundation for your long-term success in the dynamic UAE market."
+  },
+  {
     slug: "shabana-usman",
     name: "Ms Shabana Usman",
     role: "Operations Manager",
