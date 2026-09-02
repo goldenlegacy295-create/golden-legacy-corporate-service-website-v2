@@ -16,6 +16,7 @@ interface TeamMember {
   expertise?: string;
   profession?: string;
   experience?: string;
+  imageClass?: string;
 }
 
 const TeamMemberClient = ({ member }: { member: TeamMember }) => {
@@ -105,7 +106,7 @@ const TeamMemberClient = ({ member }: { member: TeamMember }) => {
               src={member.image}
               alt={member.name}
               fill
-              className="object-cover object-center hover:scale-105 transition-all duration-1000"
+              className={`object-cover ${member.imageClass || 'object-center'} hover:scale-105 transition-all duration-1000`}
               priority
             />
           </motion.div>

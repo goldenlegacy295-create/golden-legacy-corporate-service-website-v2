@@ -51,6 +51,7 @@ export const teamMembers = [
     name: "Mr Zoraver",
     role: "Corporate Service Advisor",
     image: "/Zoraver.png",
+    imageClass: "object-top",
     bio: "Mr Zoraver is a dedicated Corporate Service Advisor at GOLDEN LEGACY, providing expert guidance and strategic insights to entrepreneurs looking to establish and expand their businesses in the UAE.",
     message: "My priority is to deliver tailored corporate solutions that drive growth, ensure compliance, and lay a solid foundation for your long-term success in the dynamic UAE market."
   },
