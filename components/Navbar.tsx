@@ -295,7 +295,7 @@ const Navbar = () => {
               {/* Mobile Footer Info */}
               <div className="mt-auto px-6 pt-8 border-t border-white/5 space-y-4">
                  <div className="flex items-center justify-between">
-                    <a href="tel:+971526065777" className="p-4 bg-white/5 rounded-2xl flex-1 flex flex-col items-center gap-2 group border border-transparent active:border-gold/50 transition-all">
+                    <a href="tel:+971556656007" className="p-4 bg-white/5 rounded-2xl flex-1 flex flex-col items-center gap-2 group border border-transparent active:border-gold/50 transition-all">
                        <Phone size={18} className="text-gold" />
                        <span className="text-[10px] font-black tracking-widest uppercase text-gray-500">Call Now</span>
                     </a>

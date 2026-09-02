@@ -42,8 +42,8 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               {[
-                { Icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61587542722949' },
-                { Icon: Linkedin, href: 'https://www.linkedin.com/in/golden-legacy-corporate-services-legacy-8263a73aa/' },
+                { Icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61586592230906' },
+                { Icon: Linkedin, href: 'https://www.linkedin.com/company/golden-legacy-corporate-service/' },
                 { Icon: Instagram, href: 'https://www.instagram.com/goldenlegacy.ae/' }
               ].map(({ Icon, href }, i) => (
                 <a 
@@ -90,7 +90,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-white font-bold mb-1">Visit Our Office</p>
-                  <p className="text-gray-500 leading-relaxed font-light">Located At The Heart Of Dubai - Sheikh Zayed Road</p>
+                  <p className="text-gray-500 leading-relaxed font-light">M 06, Emgate Building, Near Bank of Baroda,<br/>Sheikh Zayed Road, Dubai, UAE<br/>PO BOX 415227</p>
                 </div>
               </div>
 
@@ -101,7 +101,7 @@ const Footer = () => {
                 <div>
                   <p className="text-white font-bold mb-1">Direct Lines</p>
                   <div className="flex flex-col gap-1">
-                    <a href="tel:+971526065777" className="text-gray-500 hover:text-gold transition-colors">+971 52 606 5777</a>
+                    <a href="tel:+971556656007" className="text-gray-500 hover:text-gold transition-colors">+971 55 665 6007</a>
 
                   </div>
                 </div>
@@ -122,14 +122,16 @@ const Footer = () => {
             </div>
           </div>
         </div>
-         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-end items-center gap-8">
-           
-           
-           
+         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+           <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4 md:gap-8 text-gray-500 text-sm">
+             <p>© {new Date().getFullYear()} Golden Legacy. All rights reserved.</p>
+             <Link href="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</Link>
+             <p className="text-xs md:text-[11px] uppercase tracking-widest mt-1 md:mt-0">Designed & Developed by <a href="https://www.ckrcreatives.com/" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-white transition-colors font-black">CKR Creatives</a></p>
+           </div>
 
            <button 
              onClick={scrollToTop}
-             className="group flex items-center gap-4 text-gray-500 hover:text-gold transition-all duration-500"
+             className="group flex items-center gap-4 text-gray-500 hover:text-gold transition-all duration-500 shrink-0"
            >
              <span className="text-[10px] font-black uppercase tracking-[0.4em]">Back to Top</span>
              <div className="w-12 h-12 rounded-2xl border border-white/5 flex items-center justify-center group-hover:border-gold/50 group-hover:bg-gold/5 transition-all duration-500 rotate-45 group-hover:rotate-0">

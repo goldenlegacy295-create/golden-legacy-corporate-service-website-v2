@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SocialSidebar from "@/components/SocialSidebar";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import LeadModal from "@/components/LeadModal";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
+import SmoothScroll from "@/components/SmoothScroll";
 import { Inter, Roboto_Slab, Roboto_Condensed } from "next/font/google";
 
 const inter = Inter({ 
@@ -42,17 +42,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body className={`${inter.variable} ${robotoSlab.variable} ${robotoCondensed.variable} font-sans antialiased bg-background text-foreground`}>
-        <Navbar />
-        <SocialSidebar />
-        <MobileBottomNav />
-        <WhatsAppFloat />
-        <LeadModal />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          <SocialSidebar />
+          <MobileBottomNav />
+          <LeadModal />
+          <main className="min-h-screen relative z-10">
+            {children}
+          </main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

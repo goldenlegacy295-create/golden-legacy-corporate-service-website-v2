@@ -65,7 +65,7 @@ const ContactPage = () => {
                   </div>
                   <div className="space-y-1">
                     <p className="text-white font-black uppercase text-xs tracking-widest opacity-50">Headquarters</p>
-                    <p className="text-white text-lg font-medium">Located At The Heart Of Dubai - Sheikh Zayed Road</p>
+                    <p className="text-white text-lg font-medium">M 06, Emgate Building, Near Bank of Baroda, Sheikh Zayed Road, Dubai, UAE<br/>PO BOX 415227</p>
                   </div>
                 </div>
 
@@ -75,7 +75,7 @@ const ContactPage = () => {
                   </div>
                   <div className="space-y-1">
                     <p className="text-white font-black uppercase text-xs tracking-widest opacity-50">Call Us</p>
-                    <a href="tel:+971526065777" className="text-white text-lg font-medium hover:text-gold transition-colors">+971 52 606 5777</a>
+                    <a href="tel:+971556656007" className="text-white text-lg font-medium hover:text-gold transition-colors">+971 55 665 6007</a>
                     <br />
                   </div>
                 </div>

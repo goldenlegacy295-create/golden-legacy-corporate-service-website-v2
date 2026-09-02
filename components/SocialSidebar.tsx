@@ -8,7 +8,7 @@ const SocialSidebar = () => {
   const socials = [
     {
       name: 'WhatsApp',
-      href: 'https://wa.me/971526065777',
+      href: 'https://wa.me/971556656007',
       color: '#25D366',
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
@@ -18,7 +18,7 @@ const SocialSidebar = () => {
     },
     {
       name: 'Call Us',
-      href: 'tel:+971526065777',
+      href: 'tel:+971556656007',
       color: '#000',
       icon: <Phone size={20} fill="currentColor" />
     },
@@ -34,7 +34,7 @@ const SocialSidebar = () => {
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/golden-legacy-corporate-services-legacy-8263a73aa/',
+      href: 'https://www.linkedin.com/company/golden-legacy-corporate-service/',
       color: '#0077B5',
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
@@ -44,7 +44,7 @@ const SocialSidebar = () => {
     },
     {
       name: 'Facebook',
-      href: 'https://www.facebook.com/profile.php?id=61587542722949',
+      href: 'https://www.facebook.com/profile.php?id=61586592230906',
       color: '#1877F2',
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">

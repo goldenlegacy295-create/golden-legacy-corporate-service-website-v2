@@ -17,6 +17,15 @@ export const teamMembers = [
     message: "I started this company at a time when the concept of business consultancies was still new, and people were quite hesitant to trust company formation experts to take over the planning process. Since then, GOLDEN LEGACY has come a long way – we have massively added to our clientele and expanded our list of services. Now, we cater to a larger pool of potential clients across many regions. GOLDEN LEGACY has become one of the top names in the industry and we aim to reach greater heights with our market expertise."
   },
   {
+    slug: "fatema-rizvi",
+    name: "Ms Fatema Rizvi",
+    role: "Corporate Services Advisor",
+    image: "/team/Fatima.png",
+    linkedin: "https://www.linkedin.com/in/fatema-rizvi-74673298",
+    bio: "Ms Fatema Rizvi serves as a Corporate Services Advisor at GOLDEN LEGACY, specializing in providing comprehensive business setup solutions. With a keen eye for detail and a client-centric approach, she guides businesses through licensing, regulatory compliance, and strategic planning. Her expertise ensures that our clients receive the most efficient and effective paths to establishing their presence in the UAE market.",
+    message: "Navigating the UAE's regulatory landscape requires more than just knowledge; it requires a commitment to the client's vision. My goal is to simplify the complex and provide clear, actionable advice that empowers entrepreneurs to succeed."
+  },
+  {
     slug: "virender-kumar",
     name: "Mr. Virender Kumar",
     role: "Corporate Services Advisor",
@@ -25,15 +34,6 @@ export const teamMembers = [
     experience: "2 Decades",
     bio: "Mr. Virender Kumar is a distinguished Corporate Services Advisor bringing two decades of elite banking experience in the UAE to GOLDEN LEGACY. He leverages his deep financial expertise to guide entrepreneurs through the intricacies of business setup and banking operations. His commanding knowledge of financial institutions and government regulations ensures that every client's business structure is optimized for long-term growth and stability.",
     message: "Building a business in the UAE is an exciting journey. I am here to ensure that your foundation is solid and that you are perfectly positioned to take advantage of the region's immense opportunities."
-  },
-  {
-    slug: "fatema-rizvi",
-    name: "Ms Fatema Rizvi",
-    role: "Corporate Services Advisor",
-    image: "/team/Fatima.png",
-    linkedin: "https://www.linkedin.com/in/fatema-rizvi-74673298",
-    bio: "Ms Fatema Rizvi serves as a Corporate Services Advisor at GOLDEN LEGACY, specializing in providing comprehensive business setup solutions. With a keen eye for detail and a client-centric approach, she guides businesses through licensing, regulatory compliance, and strategic planning. Her expertise ensures that our clients receive the most efficient and effective paths to establishing their presence in the UAE market.",
-    message: "Navigating the UAE's regulatory landscape requires more than just knowledge; it requires a commitment to the client's vision. My goal is to simplify the complex and provide clear, actionable advice that empowers entrepreneurs to succeed."
   },
   {
     slug: "nikita-agarwal",
@@ -51,8 +51,28 @@ export const teamMembers = [
     name: "Mr Zoraver",
     role: "Corporate Service Advisor",
     image: "/team/Zoraver.png",
+    linkedin: "https://www.linkedin.com/in/zoraver-singh-723280268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     bio: "Mr Zoraver is a dedicated Corporate Service Advisor at GOLDEN LEGACY, providing expert guidance and strategic insights to entrepreneurs looking to establish and expand their businesses in the UAE.",
     message: "My priority is to deliver tailored corporate solutions that drive growth, ensure compliance, and lay a solid foundation for your long-term success in the dynamic UAE market."
+  },
+  {
+    slug: "sharma",
+    name: "Ms Sharma",
+    role: "Corporate Services Advisor",
+    image: "/team/sharma.jpg",
+    linkedin: "https://www.linkedin.com/in/ssharma0512?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    bio: "Ms Sharma is a dedicated professional at GOLDEN LEGACY.",
+    message: "I am committed to delivering excellence and supporting our clients."
+  },
+  {
+    slug: "santosh-gunjala",
+    name: "Mr Santosh Gunjala",
+    role: "PRO Service Provider",
+    image: "/team/Snathosh.png",
+    linkedin: "https://www.linkedin.com/in/santhosh-gunjala-0720b9231?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    experience: "15 years",
+    bio: "Mr. Santosh Gunjala is a highly experienced PRO Service Provider with 15 years of expertise in navigating the UAE's administrative and governmental landscape. He specializes in document processing, visa services, and liaison with various government authorities, ensuring swift and efficient processing for our corporate clients.",
+    message: "With over 15 years in the industry, I understand that timing and accuracy are everything. My goal is to handle the administrative complexities so that our clients can focus entirely on their core business growth."
   },
   {
     slug: "shabana-usman",
@@ -65,15 +85,6 @@ export const teamMembers = [
     message: "Operational efficiency is the heartbeat of GOLDEN LEGACY. We strive to provide a seamless experience for our clients, ensuring that every step of their journey with us is managed with the utmost care and professionalism."
   },
   {
-    slug: "santosh-gunjala",
-    name: "Mr Santosh Gunjala",
-    role: "PRO Service Provider",
-    image: "/team/Snathosh.png",
-    experience: "15 years",
-    bio: "Mr. Santosh Gunjala is a highly experienced PRO Service Provider with 15 years of expertise in navigating the UAE's administrative and governmental landscape. He specializes in document processing, visa services, and liaison with various government authorities, ensuring swift and efficient processing for our corporate clients.",
-    message: "With over 15 years in the industry, I understand that timing and accuracy are everything. My goal is to handle the administrative complexities so that our clients can focus entirely on their core business growth."
-  },
-  {
     slug: "prathibha-mathew",
     name: "Ms Prathibha Mathew",
     role: "HR & Admin",
@@ -81,5 +92,14 @@ export const teamMembers = [
     linkedin: "https://www.linkedin.com/in/prathibha-mathew-6192a0122/",
     bio: "Ms. Prathibha Mathew serves as HR & Admin at GOLDEN LEGACY, working closely with our operations and PRO teams to ensure seamless internal processes. Dedicated to organizational excellence, she manages administrative functions that support our entire team in delivering premium corporate services to our global clients.",
     message: "Efficiency and coordination are the foundation of our success. I am dedicated to ensuring that our internal operations run smoothly so that our experts can focus on what they do best – helping your business thrive."
+  },
+  {
+    slug: "muhammed-rinshad",
+    name: "Mr Muhammed Rinshad",
+    role: "Accountant",
+    image: "/team/rinshad.png",
+    linkedin: "https://www.linkedin.com/in/rinshad-pt?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    bio: "Mr Muhammed Rinshad serves as an Accountant at GOLDEN LEGACY, ensuring accurate financial management and compliance. His dedication to maintaining precise financial records supports the firm's overall operational efficiency.",
+    message: "Financial integrity is the cornerstone of trust. I am committed to delivering precise and transparent financial operations to support our clients' continued success."
   }
 ];
