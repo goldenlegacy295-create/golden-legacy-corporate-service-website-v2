@@ -22,7 +22,7 @@ const Footer = () => {
              <Link href="/" className="group flex items-center gap-4">
               <div className="relative w-20 h-20 overflow-hidden rounded-2xl transition-all group-hover:scale-105">
                 <Image 
-                  src="/golden-logo.png" 
+                  src="/logo.png" 
                   alt="Golden Legacy Logo" 
                   fill 
                   className="object-contain"
@@ -56,6 +56,9 @@ const Footer = () => {
                   <Icon size={20} />
                 </a>
               ))}
+            </div>
+            <div className="pt-4">
+              <Link href="/privacy-policy" className="text-gray-400 hover:text-gold transition-colors text-sm underline underline-offset-4">Privacy Policy</Link>
             </div>
           </div>
 
@@ -125,7 +128,6 @@ const Footer = () => {
          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
            <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4 md:gap-8 text-gray-500 text-sm">
              <p>© {new Date().getFullYear()} Golden Legacy. All rights reserved.</p>
-             <Link href="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</Link>
              <p className="text-xs md:text-[11px] uppercase tracking-widest mt-1 md:mt-0">Designed & Developed by <a href="https://www.ckrcreatives.com/" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-white transition-colors font-black">CKR Creatives</a></p>
            </div>
 

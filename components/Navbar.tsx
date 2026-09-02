@@ -92,7 +92,7 @@ const Navbar = () => {
             <Link href="/" className="group flex items-center gap-3">
               <div className="relative w-16 h-12 overflow-hidden">
                 <Image 
-                  src="/golden-logo.png" 
+                  src="/logo.png" 
                   alt="Golden Legacy Logo" 
                   fill 
                   className="object-contain"
