@@ -5,6 +5,23 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from 'lucide-react';
 
 const ContactPage = () => {
+  const [status, setStatus] = React.useState<'idle' | 'sending' | 'success'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('sending');
+    const formData = new FormData(e.currentTarget);
+    try {
+      await fetch("https://formsubmit.co/ajax/goldenlegacy295@gmail.com", {
+        method: "POST",
+        body: formData,
+      });
+      setStatus('success');
+    } catch (error) {
+      console.error(error);
+      setStatus('idle');
+    }
+  };
   return (
     <div className="flex flex-col w-full bg-[#030303] overflow-x-hidden pt-20">
       {/* Hero Header */}
@@ -102,12 +119,31 @@ const ContactPage = () => {
                     <p className="text-gray-500 text-sm">Fill out the details below and our experts will contact you shortly.</p>
                   </div>
 
-                  <form className="space-y-6">
+                  {status === 'success' ? (
+                    <div className="bg-gray-50 p-12 rounded-3xl border border-gray-100 text-center space-y-6">
+                      <div className="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mx-auto">
+                        <Send className="text-gold" size={32} />
+                      </div>
+                      <div className="space-y-2">
+                        <h4 className="text-2xl font-black text-black uppercase tracking-tight">Form Submitted Successfully!</h4>
+                        <p className="text-gray-500">We have received your secure message. Our experts will contact you shortly.</p>
+                      </div>
+                      <button 
+                        onClick={() => setStatus('idle')}
+                        className="text-gold text-sm font-bold uppercase tracking-widest mt-4 hover:text-black transition-colors"
+                      >
+                        Send another message
+                      </button>
+                    </div>
+                  ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-xs font-black uppercase tracking-widest text-black/40 ml-2">Full Name</label>
                         <input 
                           type="text" 
+                          name="name"
+                          required
                           placeholder="John Doe" 
                           className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 text-black focus:outline-none focus:border-gold/50 transition-all font-medium"
                         />
@@ -116,6 +152,8 @@ const ContactPage = () => {
                         <label className="text-xs font-black uppercase tracking-widest text-black/40 ml-2">Email Address</label>
                         <input 
                           type="email" 
+                          name="email"
+                          required
                           placeholder="john@example.com" 
                           className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 text-black focus:outline-none focus:border-gold/50 transition-all font-medium"
                         />
@@ -127,18 +165,20 @@ const ContactPage = () => {
                         <label className="text-xs font-black uppercase tracking-widest text-black/40 ml-2">Phone Number</label>
                         <input 
                           type="tel" 
+                          name="phone"
+                          required
                           placeholder="+971" 
                           className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 text-black focus:outline-none focus:border-gold/50 transition-all font-medium"
                         />
                       </div>
                       <div className="space-y-2">
                         <label className="text-xs font-black uppercase tracking-widest text-black/40 ml-2">Service Type</label>
-                        <select className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 text-black focus:outline-none focus:border-gold/50 transition-all font-medium appearance-none">
-                          <option>Mainland Setup</option>
-                          <option>Free Zone Setup</option>
-                          <option>Offshore Setup</option>
-                          <option>Banking Assistance</option>
-                          <option>Other Consultations</option>
+                        <select name="service" className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 text-black focus:outline-none focus:border-gold/50 transition-all font-medium appearance-none">
+                          <option value="Mainland Setup">Mainland Setup</option>
+                          <option value="Free Zone Setup">Free Zone Setup</option>
+                          <option value="Offshore Setup">Offshore Setup</option>
+                          <option value="Banking Assistance">Banking Assistance</option>
+                          <option value="Other Consultations">Other Consultations</option>
                         </select>
                       </div>
                     </div>
@@ -147,15 +187,18 @@ const ContactPage = () => {
                       <label className="text-xs font-black uppercase tracking-widest text-black/40 ml-2">Your Message</label>
                       <textarea 
                         rows={5}
+                        name="message"
+                        required
                         placeholder="Tell us about your business vision..." 
                         className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 text-black focus:outline-none focus:border-gold/50 transition-all font-medium resize-none"
                       ></textarea>
                     </div>
 
-                    <button className="btn-premium w-full py-5 !rounded-2xl text-lg flex items-center justify-center gap-3 shadow-[0_20px_40px_rgba(212,175,55,0.2)]">
-                      Send Secure Message <Send size={20} />
+                    <button type="submit" disabled={status === 'sending'} className="btn-premium w-full py-5 !rounded-2xl text-lg flex items-center justify-center gap-3 shadow-[0_20px_40px_rgba(212,175,55,0.2)] disabled:opacity-50">
+                      {status === 'sending' ? 'Sending...' : 'Send Secure Message'} <Send size={20} />
                     </button>
                   </form>
+                  )}
                 </div>
               </div>
             </div>
