@@ -29,42 +29,42 @@ const CoreServices = () => {
       desc: "Unlimited trade flexibility across UAE and global markets with onshore licensing.",
       img: "/images/mainland.png",
       link: "/mainland-company-formation-in-dubai",
-      icon: <Building2 className="text-gold mb-4" />
+      icon: <Building2 className="text-gold mb-4" size={40} />
     },
     {
       title: "Free Zone Setup",
       desc: "100% foreign ownership and zero taxes in specialized economic clusters.",
       img: "/images/freezone.png",
       link: "/dubai-free-zone-company-overview",
-      icon: <Zap className="text-gold mb-4" />
+      icon: <Zap className="text-gold mb-4" size={40} />
     },
     {
       title: "Offshore Setup",
       desc: "Enhanced privacy, asset protection, and tax optimization for global holding.",
       img: "/images/offshore.png",
       link: "/offshore-company-formation-in-dubai",
-      icon: <Globe2 className="text-gold mb-4" />
+      icon: <Globe2 className="text-gold mb-4" size={40} />
     },
     {
       title: "Bank Account Services",
       desc: "Expert assistance in navigating multi-currency corporate account setups with premier UAE banks.",
       img: "/images/mainland.png",
       link: "/bank-account-opening-dubai",
-      icon: <Landmark className="text-gold mb-4" />
+      icon: <Landmark className="text-gold mb-4" size={40} />
     },
     {
       title: "Value Added Services",
       desc: "Comprehensive corporate support including Golden Visas, PRO, VAT, and ISO certification.",
       img: "/images/freezone.png",
       link: "/pro-services-dubai",
-      icon: <PlusCircle className="text-gold mb-4" />
+      icon: <PlusCircle className="text-gold mb-4" size={40} />
     },
     {
       title: "UAE Will Service",
       desc: "Secure your legacy and protect your assets with legally compliant Will drafting and registration.",
       img: "/images/wills-service.png",
       link: "/uae-wills-service",
-      icon: <FileCheck className="text-gold mb-4" />
+      icon: <FileCheck className="text-gold mb-4" size={40} />
     }
   ];
 
@@ -96,9 +96,7 @@ const CoreServices = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-8 left-8">
-                   <div className="w-12 h-12 bg-gold rounded-2xl flex items-center justify-center text-black mb-4">
-                     {service.icon}
-                   </div>
+                   {service.icon}
                    <h4 className="text-3xl font-black text-white">{service.title}</h4>
                 </div>
               </div>
