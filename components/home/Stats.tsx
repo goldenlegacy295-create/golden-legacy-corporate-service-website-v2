@@ -1,7 +1,30 @@
 "use client";
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Briefcase, Users, BarChart3, Award } from 'lucide-react';
+import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
+
+const StatCounter = ({ value }: { value: string }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  
+  const numMatch = value.match(/\d+/);
+  const suffixMatch = value.match(/\D+$/);
+  const targetNum = numMatch ? parseInt(numMatch[0]) : 0;
+  const suffix = suffixMatch ? suffixMatch[0] : '';
+  
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest) + suffix);
+
+  useEffect(() => {
+    if (isInView) {
+      const animation = animate(count, targetNum, { duration: 2.5, ease: "easeOut" });
+      return animation.stop;
+    }
+  }, [isInView, count, targetNum]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+};
 
 const Stats = () => {
   const stats = [
@@ -24,7 +47,7 @@ const Stats = () => {
                   {stat.icon}
                 </div>
                 <div className="text-3xl md:text-5xl font-black text-black tracking-tighter">
-                  {stat.val}
+                  <StatCounter value={stat.val} />
                 </div>
                 <div className="text-black/60 font-black tracking-[0.2em] uppercase text-[10px] md:text-[12px]">
                   {stat.label}
