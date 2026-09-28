@@ -52,7 +52,7 @@ async function generateBlog() {
 
   console.log(`Found ${existingTitles.length} existing articles.`);
 
-  const prompt = \`
+  const prompt = `
 You are an expert business consultant and copywriter based in Dubai. 
 You write professional, highly practical, and SEO-friendly articles for "Golden Legacy Corporate Services".
 Their website is https://www.goldenlegacy.ae/.
@@ -62,7 +62,7 @@ Prioritize official sources (e.g., u.ae, invest.dubai.ae, tax.gov.ae). Do not in
 Do not use generic AI phrasing. Make it sound trustworthy, clear, and practical for entrepreneurs, investors, and SMEs.
 
 Existing articles (DO NOT DUPLICATE THESE TOPICS):
-\${existingTitles.map(t => '- ' + t).join('\\n')}
+${existingTitles.map(t => '- ' + t).join('\n')}
 
 Focus on one of these areas:
 - Dubai mainland company setup
@@ -82,7 +82,7 @@ Output the result EXACTLY as a JSON object with the following structure (no mark
   "imagePrompt": "A highly detailed prompt for DALL-E 3 to generate an abstract, professional corporate blog cover image related to this topic. Do not include text in the image.",
   "content": "HTML formatted content. Include <h2> and <h3> tags, <ul>/<ol> lists, and practical examples. Do not include the main <h1> title in the content. Use professional styling. Add a 'Conclusion' section. Make it detailed and long enough."
 }
-\`;
+`;
 
   console.log('Generating article content via OpenAI...');
   
