@@ -30,6 +30,7 @@ https.get({
           if (jobs && jobs.length > 0) {
              const jobId = jobs[0].id;
              console.log('Job URL:', jobs[0].html_url);
+             console.log('Steps:', JSON.stringify(jobs[0].steps.filter(s => s.conclusion === 'failure'), null, 2));
              
              // Get the logs
              https.get({
