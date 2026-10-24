@@ -48,11 +48,11 @@ export const teamMembers = [
   },
   {
     slug: "zoraver",
-    name: "Mr Zoraver",
+    name: "Mr Zoraver Singh",
     role: "Corporate Service Advisor",
     image: "/team/Zoraver.png",
     linkedin: "https://www.linkedin.com/in/zoraver-singh-723280268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    bio: "Mr Zoraver is a dedicated Corporate Service Advisor at GOLDEN LEGACY, providing expert guidance and strategic insights to entrepreneurs looking to establish and expand their businesses in the UAE.",
+    bio: "Mr Zoraver Singh is a dedicated Corporate Service Advisor at GOLDEN LEGACY, providing expert guidance and strategic insights to entrepreneurs looking to establish and expand their businesses in the UAE.",
     message: "My priority is to deliver tailored corporate solutions that drive growth, ensure compliance, and lay a solid foundation for your long-term success in the dynamic UAE market."
   },
   {
