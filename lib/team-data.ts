@@ -57,11 +57,12 @@ export const teamMembers = [
   },
   {
     slug: "sharma",
-    name: "Ms Sharma",
+    name: "Ms Sweta Sharma",
     role: "Corporate Services Advisor",
     image: "/team/sharma.jpg",
     linkedin: "https://www.linkedin.com/in/ssharma0512?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    bio: "Ms Sharma is a dedicated professional at GOLDEN LEGACY.",
+    experience: "10+ Years",
+    bio: "Sweta Sharma brings over a decade of consultancy experience advising HNWIs and global entities on UAE market expansion. She manages end-to-end entity setup across Mainland, Free Zone, and Offshore jurisdictions. Her high-touch advisory spans institutional banking onboarding, asset protection and succession planning via POAs and Wills, and strategic residency frameworks for business owners and executive leadership.",
     message: "I am committed to delivering excellence and supporting our clients."
   },
   {
